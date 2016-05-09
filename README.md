@@ -1,11 +1,12 @@
 
-  A util js used to deal with link deep, in this order:
+## Overview
+
+ A util js used to deal with link deep, in this order:
+  * Deep Link 
+  * Open the app in app store (iOS) OR Open the app in android market  
+  * Open the original URL 
   
-  1. Deep Link 
-  2. Open the app in app store (iOS) OR Open the app in android market 
-  3. Open the original URL 
-  
- Sample:
+## Sample:
 
 ```
   <a href="http://www.ruyuapp.com"
