@@ -11,7 +11,7 @@
 
 (function() {
 	'use strict';
-	var delay = 800;
+	var delay = 1200;
 	var OSs = {
 		android: {
 			prefix:"market://details?id=",
@@ -77,8 +77,14 @@
 						open(href);
 					}
 				}, delay);
-
-				open(app);
+				
+				//微信和QQ浏览器
+				if(OS.toLowerCase() == "android" && (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger" || navigator.userAgent.toLowerCase().match(/QQ/i) == "qq")){
+					open("http://a.app.qq.com/o/simple.jsp?pkgname="+store);
+				}else{
+					open(app);
+				}
+				
 			};
 		} else if(!href || href === '#') {
 			// 无效的链接
